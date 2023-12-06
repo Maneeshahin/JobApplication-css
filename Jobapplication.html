@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+      } */
+      .container{
+        max-width: 900px;
+        margin:0 auto;
+        margin-top: 100px;
+      }
+      .box{
+        max-width: 600px;
+        padding:20px;
+        background-color: white;
+        margin:0 auto;
+        margin-top: 50px;
+        box-shadow: 4px 3px 5px rgba(1,1,1,0.1);
+        border-radius: 10px;
+      }
+        
+        body{
+            background-color: rgb(161, 157, 157);
+        }
+        .small{
+          font-size: medium;
+        }
+        .form_container
+        {
+          margin-top:20px;
+          display:grid;
+          grid-template-columns:repeat(auto-fit, minmax(200px,1fr) );
+          gap:20px;
+        }
+        .data{
+          display:flex;
+          flex-direction: column;
+        }
+       label{
+        font-size: 15px;
+        margin-bottom: 5px;
+
+       }
+       input,textarea,select{
+        padding:5px 10px;
+        border:1px solid grey;
+        border-radius: 4px;
+        font-size: 15px;
+       }
+       .buttoncontainer{
+        display: flex;
+        justify-content: end;
+        margin-top:20px;
+       }
+       button{
+        background-color: red;
+        border:transparent solid 2px;
+        padding:5px 10px;
+        color: aliceblue;
+        border-radius: 6px;
+        transition: 0.3s ease-in;
+       }
+       button:hover{
+        background-color: brown;
+        transition: 0.3s ease-out;
+        cursor: pointer;
+       }
+       .dataadress{
+        grid-column: 1/ span 2;
+       }
+       .dataadress textarea{
+         width:100%;
+       }
+       select{
+        color: gray;
+       }
+      </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+    <h1>Job Application<span class="small">(Web)</span></h1>
+   
+    <form action="submit">
+      <div class="form_container">
+      <div class="data">
+      <label for="firstname">First name</label>                
+      <input type="text" placeholder="Enter first name" id="firstname" name="firstname">
+      </div> 
+      <div class="data">
+      <label for="lastname">Last name</label>                
+      <input type="text" placeholder="Enter last name" id="lastname" name="lastname">
+      </div>
+      <div class="data">
+      <label for="mail">Email</label>
+      <input type="email" id="mail" name="mail"placeholder="Enter email">
+      </div>
+      <div class="data">
+        <label for="job">Job role</label>
+        <select id="job" name="job" >
+        <option value="a">Officer</option>
+        <option value="b">Intern</option>
+        <option value="c">Trainee</option>
+        </select>
+      </div>
+      <div class="dataadress">
+      <label for="address"> Address</label>
+      <textarea id="address"  placeholder="Enter address"></textarea>
+      </div>
+      <div class="data">
+        <label for="city">City</label>
+        <input type="text" id="city" placeholder="Enter city name">
+      </div>
+      <div class="data">
+       <label for="no">Pincode</label>
+       <input type="number" id="no" placeholder="Enter Pincode">
+      </div>
+      <div class="data">
+        <label for="date">Date</label>
+        <input type="date" id="date" value="10/10/2023">
+      </div>
+      <div class="data">
+    <label for="cv">Upload your cv</label>
+    <input type="file" id="cv" name="cv" placeholder="Upload your cv">
+      </div>
+    </div>
+    <div class="buttoncontainer">
+      <button type="submit">Apply now</button>
+    </div>
+    </form>
+    </div>
+    </div>
+</body>
+</html>
